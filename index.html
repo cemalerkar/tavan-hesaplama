@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tavan Hesaplama</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="input-container">
+            <div id="inputdiv-1">
+                <label for="hisse-fiyat">Hisse Fiyatı</label>
+                <input type="number" id="hisse-fiyat" value="" placeholder="Değer Giriniz">
+            </div>
+            <div id="inputdiv-2">
+                <label for="lot-sayi">Lot Miktarı</label>
+                <input type="number" id="lot-sayi" value="" placeholder="Değer Giriniz">
+            </div>
+            <input type="submit" value="Hesapla" onclick="submit()">
+        </div>
+        <div class="final-container">
+            <table style="display: none;" id="table">
+                <tr>
+                    <th>Tavan Sayısı</th>
+                    <th>Hisse Fiyatı</th>
+                    <th>Toplam Kâr</th>
+                </tr>
+                <tr>
+                    <td>1. Tavan</td>
+                    <td id="val1">value</td>
+                    <td id="pro1">profit</td>
+                </tr>
+                <tr>
+                    <td>2. Tavan</td>
+                    <td id="val2">value</td>
+                    <td id="pro2">profit</td>
+                </tr>
+                <tr>
+                    <td>3. Tavan</td>
+                    <td id="val3">value</td>
+                    <td id="pro3">profit</td>
+                </tr>
+                <tr>
+                    <td>4. Tavan</td>
+                    <td id="val4">value</td>
+                    <td id="pro4">profit</td>
+                </tr>
+                <tr>
+                    <td>5. Tavan</td>
+                    <td id="val5">value</td>
+                    <td id="pro5">profit</td>
+                </tr>
+                <tr>
+                    <td>6. Tavan</td>
+                    <td id="val6">value</td>
+                    <td id="pro6">profit</td>
+                </tr>
+                <tr>
+                    <td>7. Tavan</td>
+                    <td id="val7">value</td>
+                    <td id="pro7">profit</td>
+                </tr>
+                <tr>
+                    <td>8. Tavan</td>
+                    <td id="val8">value</td>
+                    <td id="pro8">profit</td>
+                </tr>
+                <tr>
+                    <td>9. Tavan</td>
+                    <td id="val9">value</td>
+                    <td id="pro9">profit</td>
+                </tr>
+                <tr>
+                    <td>10. Tavan</td>
+                    <td id="val10">value</td>
+                    <td id="pro10">profit</td>
+                </tr>
+                <tr>
+                    <td>11. Tavan</td>
+                    <td id="val11">value</td>
+                    <td id="pro11">profit</td>
+                </tr>
+                <tr>
+                    <td>12. Tavan</td>
+                    <td id="val12">value</td>
+                    <td id="pro12">profit</td>
+                </tr>
+                <tr>
+                    <td>13. Tavan</td>
+                    <td id="val13">value</td>
+                    <td id="pro13">profit</td>
+                </tr>
+                <tr>
+                    <td>14. Tavan</td>
+                    <td id="val14">value</td>
+                    <td id="pro14">profit</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</body>
+
+<script>
+    function submit() {
+        let fiyat = document.getElementById("hisse-fiyat").value;
+        let lot = document.getElementById("lot-sayi").value;
+
+        let val1 = document.getElementById("val1")
+        let val2 = document.getElementById("val2")
+        let val3 = document.getElementById("val3")
+        let val4 = document.getElementById("val4")
+        let val5 = document.getElementById("val5")
+        let val6 = document.getElementById("val6")
+        let val7 = document.getElementById("val7")
+        let val8 = document.getElementById("val8")
+        let val9 = document.getElementById("val9")
+        let val10 = document.getElementById("val10")
+        let val11 = document.getElementById("val11")
+        let val12 = document.getElementById("val12")
+        let val13 = document.getElementById("val13")
+        let val14 = document.getElementById("val14")
+
+        let pro1 = document.getElementById("pro1")
+        let pro2 = document.getElementById("pro2")
+        let pro3 = document.getElementById("pro3")
+        let pro4 = document.getElementById("pro4")
+        let pro5 = document.getElementById("pro5")
+        let pro6 = document.getElementById("pro6")
+        let pro7 = document.getElementById("pro7")
+        let pro8 = document.getElementById("pro8")
+        let pro9 = document.getElementById("pro9")
+        let pro10 = document.getElementById("pro10")
+        let pro11 = document.getElementById("pro11")
+        let pro12 = document.getElementById("pro12")
+        let pro13 = document.getElementById("pro13")
+        let pro14 = document.getElementById("pro14")
+
+        val1.innerHTML = Math.round(fiyat * (1.1))
+        pro1.innerHTML = Math.round((fiyat * lot * 1.1) - (fiyat * lot))
+        val2.innerHTML = Math.round(fiyat * (1.1 * 1.1))
+        pro2.innerHTML = Math.round((fiyat * lot * 1.1 * 1.1) - (fiyat * lot))
+        val3.innerHTML = Math.round(fiyat * (1.1 * 1.1 * 1.1))
+        pro3.innerHTML = Math.round((fiyat * lot * 1.1 * 1.1 * 1.1) - (fiyat * lot))
+        val4.innerHTML = Math.round(fiyat * (1.1 * 1.1 * 1.1 * 1.1))
+        pro4.innerHTML = Math.round((fiyat * lot * 1.1 * 1.1 * 1.1 * 1.1) - (fiyat * lot))
+        val5.innerHTML = Math.round(fiyat * (1.1 * 1.1 * 1.1 * 1.1 * 1.1))
+        pro5.innerHTML = Math.round((fiyat * lot * 1.1 * 1.1 * 1.1 * 1.1 * 1.1) - (fiyat * lot))
+        val6.innerHTML = Math.round(fiyat * (1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1))
+        pro6.innerHTML = Math.round((fiyat * lot * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1) - (fiyat * lot))
+        val7.innerHTML = Math.round(fiyat * (1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1))
+        pro7.innerHTML = Math.round((fiyat * lot * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1) - (fiyat * lot))
+        val8.innerHTML = Math.round(fiyat * (1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1))
+        pro8.innerHTML = Math.round((fiyat * lot * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1) - (fiyat * lot))
+        val9.innerHTML = Math.round(fiyat * (1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1))
+        pro9.innerHTML = Math.round((fiyat * lot * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1) - (fiyat * lot))
+        val10.innerHTML = Math.round(fiyat * (1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1))
+        pro10.innerHTML = Math.round((fiyat * lot * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1) - (fiyat * lot))
+        val11.innerHTML = Math.round(fiyat * (1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1))
+        pro11.innerHTML = Math.round((fiyat * lot * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1) - (fiyat * lot))
+        val12.innerHTML = Math.round(fiyat * (1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1))
+        pro12.innerHTML = Math.round((fiyat * lot * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1) - (fiyat * lot))
+        val13.innerHTML = Math.round(fiyat * (1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1))
+        pro13.innerHTML = Math.round((fiyat * lot * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1) - (fiyat * lot))
+        val14.innerHTML = Math.round(fiyat * (1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1))
+        pro14.innerHTML = Math.round((fiyat * lot * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1) - (fiyat * lot))
+
+        let table = document.getElementById("table")
+        table.style.display = "flex"
+    }
+</script>
+
+</html>
